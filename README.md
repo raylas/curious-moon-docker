@@ -29,9 +29,17 @@ docker-compose up -d
 
 ### Connect to database
 
+#### Native client
+
 ```sh
 export $(cat .env)
 psql enceladus
+```
+
+#### Container client
+
+```sh
+docker exec -it $(docker ps | grep cassini | awk '{print $1}') /usr/local/bin/psql enceladus
 ```
 
 ### Stop Postgres
