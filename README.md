@@ -29,6 +29,8 @@ docker-compose up -d
 
 ### Connect to database
 
+Choose _one_ of the following methods:
+
 #### Native client
 
 ```sh
